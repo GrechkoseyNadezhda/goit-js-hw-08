@@ -24,7 +24,7 @@ function onFormSubmit(event) {
 function savedComment() {
   const commentText = localStorage.getItem(FORM_KEY);
   if (commentText) {
-    saveObj = JSON.parse(commentText);
+    const saveObj = JSON.parse(commentText);
 
     for (let key of form) {
       if (saveObj.hasOwnProperty(key.name)) {
